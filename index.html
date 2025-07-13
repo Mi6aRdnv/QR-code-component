@@ -1,28 +1,149 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta name="description" content="QR code challenge solution" />
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | QR code component</title>
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="32x32"
+			href="./images/favicon-32x32.png"
+		/>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
+		<title>QR code component</title>
 
-  Improve your front-end skills by building projects
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Outfit:wght@400,700&display=swap"
+			rel="stylesheet"
+		/>
+		<style>
+			/* Minimal CSS Reset */
+			* {
+				margin: 0;
+				padding: 0;
+				box-sizing: border-box;
+			}
+			html,
+			body {
+				height: 100%;
+				width: 100%;
+				font-size: 16px;
+			}
+			a {
+				text-decoration: none;
+				color: inherit;
+			}
+			ul,
+			li {
+				list-style: none;
+			}
+			img {
+				display: block;
+				max-width: 100%;
+				height: auto;
+			}
+			button {
+				cursor: pointer;
+			}
+			/*--------------------*/
 
-  Scan the QR code to visit Frontend Mentor and take your coding skills to the next level
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
-</body>
+			body {
+				font-family: "Outfit", sans-serif;
+				font-size: 15px;
+				background-color: hsl(212, 45%, 89%);
+			}
+			.main {
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				max-width: 1440px;
+				height: 100%;
+			}
+			.qr-code {
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				padding: 16px 16px 40px;
+				background-color: white;
+				max-width: 320px;
+				border-radius: 20px;
+				box-shadow: 0 25px 25px 0 rgba(0, 0, 0, 0.05);
+				text-align: center;
+			}
+			.qr-code__img-box {
+				width: 100%;
+				height: 100%;
+				margin-bottom: 24px;
+				border-radius: 10px;
+				overflow: hidden;
+			}
+			.qr-code__img {
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+			}
+			.qr-code__title {
+				margin-bottom: 16px;
+				font-weight: 700;
+				font-size: 22px;
+				line-height: 1.2;
+				color: hsl(218, 44%, 22%);
+			}
+			.qr-code__text {
+				font-weight: 400;
+				line-height: 1.4;
+				letter-spacing: 0.01em;
+				color: hsl(216, 15%, 48%);
+			}
+
+			.attribution {
+				display: none;
+			}
+		</style>
+	</head>
+
+	<body>
+		<main class="main">
+			<section class="qr-code" aria-labelledby="qr-title">
+				<a
+					href="https://www.frontendmentor.io/"
+					target="_blank"
+					rel="noopener"
+					class="qr-code__img-box"
+				>
+					<img
+						src="/images/image-qr-code.png"
+						alt="QR code linking to Frontend Mentor website"
+						class="qr-code__img"
+					/>
+				</a>
+				<h1 id="qr-title" class="qr-code__title">
+					Improve your front-end skills by building projects
+				</h1>
+				<p class="qr-code__text">
+					Scan the QR code to visit Frontend Mentor and take your coding skills
+					to the next level
+				</p>
+			</section>
+		</main>
+
+		<footer>
+			<div class="attribution">
+				Challenge by
+				<a
+					href="https://www.frontendmentor.io?ref=challenge"
+					target="_blank"
+					rel="noopener"
+					>Frontend Mentor</a
+				>. Coded by
+				<a href="https://github.com/Mi6aRdnv/" target="_blank" rel="noopener"
+					>Mi6aRdnv</a
+				>.
+			</div>
+		</footer>
+	</body>
 </html>
